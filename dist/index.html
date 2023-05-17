@@ -20,21 +20,21 @@
     <link href="output.css" rel="stylesheet" />
     <title>Frontend Mentor | News homepage</title>
   </head>
-  <body class="bg-off-white flex flex-col items-center justify-center">
+  <body class="flex flex-col items-center justify-center bg-off-white">
     <div
-      class="fixed hidden bg-very-dark-blue opacity-75 w-full h-full top-0"
+      class="fixed top-0 hidden h-full w-full opacity-75 bg-very-dark-blue"
       id="overlay"
     ></div>
-    <header class="flex w-[343px] h-[28px] justify-between mt-[28px] mx-[16px]">
+    <header class="flex justify-between w-[343px] laptop:w-[1110px] h-[28px] mt-[28px] mx-[16px]">
       <img alt="" src="images/logo.svg" />
       <nav
-        class="bg-off-white hidden max-laptop:fixed gap-y-[86.59px] min-h-screen w-[256px] flex max-laptop:flex-col max-laptop:top-0 max-laptop:right-0"
+        class="max-laptop:fixed max-laptop:top-0 max-laptop:right-0 laptop:ml-auto flex max-laptop:hidden max-laptop:min-h-screen laptop:w-full laptop:flex-row max-laptop:flex-col bg-off-white gap-y-[86.59px] laptop:gap-y-[0px] w-[256px]"
         id="navbar"
       >
-        <button class="mt-[27px] mr-[30px] self-end" id="close">
+        <button class="laptop:hidden self-end mt-[27px] mr-[30px]" id="close">
           <img alt="close icon" src="images/icon-menu-close.svg" />
         </button>
-        <ul class="text-lg ml-[24px] flex flex-col gap-y-[24px]">
+        <ul class="flex laptop:flex-row flex-col text-lg ml-[24px] laptop:ml-auto laptop:gap-x-[40px] gap-y-[24px]">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
@@ -42,13 +42,13 @@
           <li><a href="#">Categories</a></li>
         </ul>
       </nav>
-      <button id="menu">
+      <button class="laptop:hidden" id="menu">
         <img alt="menu icon" src="images/icon-menu.svg" />
       </button>
     </header>
 
-    <main class="mt-[32px] mx-[16px] w-[343px]">
-      <section class=" grid gap-y-[24px]">
+    <main class="mt-[32px] mx-[16px] w-[343px] laptop:w-[1110px]">
+      <section class="grid gap-y-[24px]">
         <img
           alt=""
           class="laptop:hidden w-full h-[300px]"
@@ -70,26 +70,26 @@
           </p>
 
           <a
-            class="w-[185px] h-[48px] mt-[24px] uppercase text-off-white flex items-center justify-center font-bold text-[14px] bg-soft-red tracking-[4.38px]"
+            class="flex items-center justify-center font-bold uppercase w-[185px] h-[48px] mt-[24px] text-off-white text-[14px] bg-soft-red tracking-[4.38px]"
             href="#"
             >Read more</a
           >
         </div>
       </section>
 
-      <section class="bg-very-dark-blue mt-[64px] flex flex-col gap-y-[35px] py-[24px] px-[20px]">
-        <h2 class="text-[32px] font-bold text-soft-orange">New</h2>
+      <section class="flex flex-col bg-very-dark-blue mt-[64px] gap-y-[35px] py-[24px] px-[20px]">
+        <h2 class="font-bold text-[32px] text-soft-orange">New</h2>
 
         <div class="flex flex-col gap-y-[61px]">
           <div class="flex flex-col gap-y-[8px]">
-            <h3 class="text-off-white text-[20px] font-bold">Hydrogen VS Electric Cars</h3>
+            <h3 class="font-bold text-off-white text-[20px]">Hydrogen VS Electric Cars</h3>
             <p class="text-dark-grayish-blue">Will hydrogen-fueled cars ever catch up to EVs?</p>
             <hr class="text-dark-grayish-blue mt-[30px]" />
           </div>
 
 
           <div class="flex flex-col gap-y-[8px]">
-            <h3 class="text-off-white text-[20px] font-bold">The Downsides of AI Artistry</h3>
+            <h3 class="font-bold text-off-white text-[20px]">The Downsides of AI Artistry</h3>
             <p class="text-dark-grayish-blue">
               What are the possible adverse effects of on-demand AI image
               generation?
@@ -98,7 +98,7 @@
           </div>
 
           <div class="flex flex-col gap-y-[8px]">
-            <h3 class="text-off-white text-[20px] font-bold">Is VC Funding Drying Up?</h3>
+            <h3 class="font-bold text-off-white text-[20px]">Is VC Funding Drying Up?</h3>
             <p class="text-dark-grayish-blue">
               Private funding by VC firms is down 50% YOY. We take a look at what
               that means.
@@ -107,12 +107,12 @@
         </div>
       </section>
 
-      <section class="mt-[64px] flex flex-col gap-y-[32px]">
+      <section class="flex flex-col mt-[64px] gap-y-[32px]">
 
         <div class="flex gap-x-[24px]">
           <img alt="" class="w-[100px] h-[127px]" src="images/image-retro-pcs.jpg" />
           <div class="flex flex-col justify-between">
-            <span class="text-grayish-blue font-bold text-[32px]">01</span>
+            <span class="font-bold text-grayish-blue text-[32px]">01</span>
             <div>
               <h3 class="font-bold">Reviving Retro PCs</h3>
               <p class="text-dark-grayish-blue">What happens when old PCs are given modern upgrades?</p>
@@ -123,7 +123,7 @@
         <div class="flex gap-x-[24px]">
           <img alt="" class="w-[100px] h-[127px]" src="images/image-top-laptops.jpg" />
           <div class="flex flex-col justify-between">
-            <span class="text-grayish-blue font-bold text-[32px]">02</span>
+            <span class="font-bold text-grayish-blue text-[32px]">02</span>
             <div>
               <h3 class="font-bold">Top 10 Laptops of 2022</h3>
               <p class="text-dark-grayish-blue">Our best picks for various needs and budgets.</p>
@@ -134,7 +134,7 @@
         <div class="flex gap-x-[24px]">
           <img alt="" class="w-[100px] h-[127px]" src="images/image-gaming-growth.jpg" />
           <div class="flex flex-col justify-between">
-            <span class="text-grayish-blue font-bold text-[32px]">03</span>
+            <span class="font-bold text-grayish-blue text-[32px]">03</span>
             <div>
               <h3 class="font-bold">The Growth of Gaming</h3>
               <p class="text-dark-grayish-blue">How the pandemic has sparked fresh opportunities.</p>

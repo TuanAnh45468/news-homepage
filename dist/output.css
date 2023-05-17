@@ -811,13 +811,50 @@ body {
     display: none;
   }
 
+  .max-laptop\:min-h-screen {
+    min-height: 100vh;
+  }
+
   .max-laptop\:flex-col {
     flex-direction: column;
   }
 }
 
 @media (min-width: 1440px) {
+  .laptop\:ml-auto {
+    margin-left: auto;
+  }
+
   .laptop\:hidden {
     display: none;
+  }
+
+  .laptop\:w-\[1110px\] {
+    width: 1110px;
+  }
+
+  .laptop\:w-\[431px\] {
+    width: 431px;
+  }
+
+  .laptop\:w-full {
+    width: 100%;
+  }
+
+  .laptop\:flex-row {
+    flex-direction: row;
+  }
+
+  .laptop\:gap-x-\[40px\] {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+
+  .laptop\:gap-y-\[0px\] {
+    row-gap: 0px;
+  }
+
+  .laptop\:self-end {
+    align-self: flex-end;
   }
 }
