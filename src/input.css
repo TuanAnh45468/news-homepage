@@ -7,3 +7,31 @@
         @apply font-inter text-base font-regular
     }
 }
+
+@layer components{
+    .underline-hover{
+        position: relative;
+    }
+
+    .underline-hover:hover{
+        color: hsl(5, 85%, 63%);
+    }
+
+    .underline-hover:after{
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: hsl(5, 85%, 63%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s;
+    }
+
+    .underline-hover:hover:after{
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+}

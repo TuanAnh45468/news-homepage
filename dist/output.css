@@ -529,16 +529,38 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
+.underline-hover{
+  position: relative;
+}
+
+.underline-hover:hover{
+  color: hsl(5, 85%, 63%);
+}
+
+.underline-hover:after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: hsl(5, 85%, 63%);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+.underline-hover:hover:after{
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
 .fixed {
   position: fixed;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
 }
 
 .col-span-2 {
@@ -562,6 +584,10 @@ body {
   margin-right: 30px;
 }
 
+.mt-\[24px\] {
+  margin-top: 24px;
+}
+
 .mt-\[27px\] {
   margin-top: 27px;
 }
@@ -570,20 +596,16 @@ body {
   margin-top: 28px;
 }
 
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+
 .mt-\[32px\] {
   margin-top: 32px;
 }
 
-.mt-\[24px\] {
-  margin-top: 24px;
-}
-
 .mt-\[64px\] {
   margin-top: 64px;
-}
-
-.mt-\[30px\] {
-  margin-top: 30px;
 }
 
 .flex {
@@ -598,16 +620,12 @@ body {
   display: none;
 }
 
+.h-\[127px\] {
+  height: 127px;
+}
+
 .h-\[28px\] {
   height: 28px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-\[636px\] {
-  height: 636px;
 }
 
 .h-\[300px\] {
@@ -618,12 +636,16 @@ body {
   height: 48px;
 }
 
-.h-\[127px\] {
-  height: 127px;
+.h-full {
+  height: 100%;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[185px\] {
+  width: 185px;
 }
 
 .w-\[256px\] {
@@ -634,20 +656,12 @@ body {
   width: 343px;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-\[185px\] {
-  width: 185px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
 .w-\[730px\] {
   width: 730px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-col {
@@ -666,12 +680,17 @@ body {
   justify-content: space-between;
 }
 
+.gap-x-\[24px\] {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
 .gap-y-\[24px\] {
   row-gap: 24px;
 }
 
-.gap-y-\[86\.59px\] {
-  row-gap: 86.59px;
+.gap-y-\[32px\] {
+  row-gap: 32px;
 }
 
 .gap-y-\[35px\] {
@@ -682,21 +701,12 @@ body {
   row-gap: 61px;
 }
 
+.gap-y-\[86\.59px\] {
+  row-gap: 86.59px;
+}
+
 .gap-y-\[8px\] {
   row-gap: 8px;
-}
-
-.gap-x-\[24px\] {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-}
-
-.gap-y-\[32px\] {
-  row-gap: 32px;
-}
-
-.gap-y-\[12px\] {
-  row-gap: 12px;
 }
 
 .self-end {
@@ -708,19 +718,14 @@ body {
   background-color: hsl(36 100% 99% / var(--tw-bg-opacity));
 }
 
-.bg-very-dark-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
-}
-
 .bg-soft-red {
   --tw-bg-opacity: 1;
   background-color: hsl(5 85% 63% / var(--tw-bg-opacity));
 }
 
-.px-\[16px\] {
-  padding-left: 16px;
-  padding-right: 16px;
+.bg-very-dark-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
 }
 
 .px-\[20px\] {
@@ -733,12 +738,20 @@ body {
   padding-bottom: 24px;
 }
 
-.pt-\[24px\] {
-  padding-top: 24px;
+.text-\[14px\] {
+  font-size: 14px;
 }
 
-.pl-\[21px\] {
-  padding-left: 21px;
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
 }
 
 .text-lg {
@@ -746,28 +759,12 @@ body {
   line-height: 1.75rem;
 }
 
-.text-\[40px\] {
-  font-size: 40px;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
-}
-
-.text-\[20px\] {
-  font-size: 20px;
+.font-bold {
+  font-weight: 700;
 }
 
 .font-extra-bold {
   font-weight: 800;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .uppercase {
@@ -778,14 +775,6 @@ body {
   line-height: 40px;
 }
 
-.leading-\[56px\] {
-  line-height: 56px;
-}
-
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
 .tracking-\[4\.38px\] {
   letter-spacing: 4.38px;
 }
@@ -793,6 +782,11 @@ body {
 .text-dark-grayish-blue {
   --tw-text-opacity: 1;
   color: hsl(236 13% 42% / var(--tw-text-opacity));
+}
+
+.text-grayish-blue {
+  --tw-text-opacity: 1;
+  color: hsl(233 8% 79% / var(--tw-text-opacity));
 }
 
 .text-off-white {
@@ -805,13 +799,23 @@ body {
   color: hsl(35 77% 62% / var(--tw-text-opacity));
 }
 
-.text-grayish-blue {
-  --tw-text-opacity: 1;
-  color: hsl(233 8% 79% / var(--tw-text-opacity));
-}
-
 .opacity-75 {
   opacity: 0.75;
+}
+
+.hover\:bg-very-dark-blue:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+}
+
+.hover\:text-soft-orange:hover {
+  --tw-text-opacity: 1;
+  color: hsl(35 77% 62% / var(--tw-text-opacity));
+}
+
+.hover\:text-off-white:hover {
+  --tw-text-opacity: 1;
+  color: hsl(36 100% 99% / var(--tw-text-opacity));
 }
 
 @media not all and (min-width: 1440px) {
@@ -841,12 +845,12 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .laptop\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
   .laptop\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .laptop\:col-span-4 {
+    grid-column: span 4 / span 4;
   }
 
   .laptop\:col-span-6 {
@@ -857,12 +861,12 @@ body {
     grid-column-start: 1;
   }
 
-  .laptop\:col-start-2 {
-    grid-column-start: 2;
-  }
-
   .laptop\:col-start-5 {
     grid-column-start: 5;
+  }
+
+  .laptop\:ml-\[30px\] {
+    margin-left: 30px;
   }
 
   .laptop\:ml-auto {
@@ -873,8 +877,8 @@ body {
     margin-top: 0px;
   }
 
-  .laptop\:ml-\[30px\] {
-    margin-left: 30px;
+  .laptop\:mb-\[165px\] {
+    margin-bottom: 165px;
   }
 
   .laptop\:grid {
@@ -889,20 +893,16 @@ body {
     width: 1110px;
   }
 
-  .laptop\:w-\[431px\] {
-    width: 431px;
-  }
-
   .laptop\:w-full {
     width: 100%;
   }
 
-  .laptop\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
   .laptop\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .laptop\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .laptop\:flex-row {
@@ -918,21 +918,12 @@ body {
     row-gap: 0px;
   }
 
-  .laptop\:self-end {
-    align-self: flex-end;
-  }
-
-  .laptop\:py-\[0px\] {
-    padding-top: 0px;
-    padding-bottom: 0px;
+  .laptop\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .laptop\:text-\[56px\] {
     font-size: 56px;
-  }
-
-  .laptop\:text-\[40px\] {
-    font-size: 40px;
   }
 
   .laptop\:leading-\[56px\] {
