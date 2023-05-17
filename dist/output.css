@@ -844,6 +844,16 @@ body {
   }
 }
 
+@media (min-width: 375px) {
+  .mobile\:mb-\[85\] {
+    margin-bottom: 85;
+  }
+
+  .mobile\:mb-\[85px\] {
+    margin-bottom: 85px;
+  }
+}
+
 @media (min-width: 1440px) {
   .laptop\:col-span-2 {
     grid-column: span 2 / span 2;
